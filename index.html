@@ -30,16 +30,27 @@
 <body>
 <div class="wrap">
   <h1>ATHENA — Privacy Policy</h1>
-  <p class="updated">Last updated: June 14, 2026</p>
+  <p class="updated">Last updated: July 19, 2026</p>
 
   <p>ATHENA is a strength-training tracker. This policy explains, in plain terms, what data the app handles.</p>
 
-  <div class="lead"><strong>The short version:</strong> Your workout data is yours. It lives on your device and in your personal iCloud — we can’t see it. No ads, no third-party analytics or trackers, and we never sell your data.</div>
+  <div class="lead"><strong>The short version:</strong> Your workout data is yours. It lives on your device and in your personal iCloud — we can’t see it. No ads, no selling your data, no tracking you across other apps. The app sends us anonymous crash reports and feature-usage counts so we can fix bugs and improve the app — never your weights, reps, or health data.</div>
 
   <h2>What the app stores</h2>
   <ul>
     <li><strong>Your training data</strong> — workouts, exercises, sets, weights, routines, body-weight entries, and settings. Stored on your device and synced through <em>your own</em> iCloud account (Apple’s CloudKit) so you don’t lose it when you change phones. We, the developer, have <strong>no access</strong> to this — it lives in your private iCloud.</li>
     <li><strong>Profile basics</strong> — an optional name and goal you enter, stored the same way.</li>
+  </ul>
+
+  <h2>Apple Health (optional)</h2>
+  <p>If you turn on the Apple Health connection, ATHENA can read your heart rate during a workout (for the live display) and save your finished workouts and body weight into Apple Health. This data moves only between the app and Apple Health on <em>your device</em> — it is <strong>never</strong> sent to us or to any third party, and it is never included in analytics.</p>
+
+  <h2>Diagnostics &amp; analytics (what we DO collect)</h2>
+  <p>To keep the app stable and understand which features matter, the app sends limited, privacy-conscious data to these services:</p>
+  <ul>
+    <li><strong>Crash reports</strong> (Firebase Crashlytics, by Google) — if the app crashes, a technical report (stack trace, device model, OS version) is sent so we can fix it. Not linked to your identity.</li>
+    <li><strong>Feature-usage events</strong> (PostHog) — anonymous counts like “a workout was finished (5 exercises, ~45 min)” or “a routine was created.” <strong>Never</strong> your weights, reps, exercise details, body weight, heart rate, or anything from Apple Health. Not linked to your identity.</li>
+    <li><strong>Purchase records</strong> (RevenueCat) — if you buy a subscription, Apple processes the payment and RevenueCat receives the anonymous purchase receipt (product and price) so we can operate subscriptions and see revenue. We never see your payment details.</li>
   </ul>
 
   <h2>Crews (optional social feature)</h2>
@@ -53,9 +64,10 @@
   <h2>What we do NOT do</h2>
   <ul>
     <li>No ads or ad networks</li>
-    <li>No third-party analytics or tracking</li>
+    <li>No tracking you across other companies’ apps or websites (no advertising identifiers)</li>
     <li>No selling or sharing your data with anyone</li>
     <li>No account or login — your identity is your anonymous iCloud ID</li>
+    <li>Your workout numbers and Apple Health data are never sent to us or anyone else</li>
   </ul>
 
   <h2>Notifications</h2>
@@ -66,6 +78,7 @@
     <li>Delete any data in the app at any time</li>
     <li>Delete the app to remove its local data; the iCloud copy is managed in Settings → [your name] → iCloud</li>
     <li>Turn off Crew sharing or leave a crew to remove your shared summaries</li>
+    <li>Crash and usage data is anonymous and auto-expires on the providers’ standard schedules; email us to ask about it</li>
   </ul>
 
   <h2>Children</h2>

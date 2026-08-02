@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATHENA — Gym Workout Tracker</title>
+<meta name="description" content="The workout tracker where your muscles light up as you train. Free on the App Store.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #040506; color: #eef2f6; min-height: 100vh;
+         font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+         display: flex; flex-direction: column; align-items: center; justify-content: center;
+         text-align: center; padding: 34px 22px; }
+  .wordmark { font-size: 30px; letter-spacing: 14px; font-weight: 300; margin-bottom: 8px; }
+  .tagline { color: #16e0c2; font-size: 13px; letter-spacing: 3px; font-weight: 700;
+             text-transform: uppercase; margin-bottom: 26px; }
+  .shot { width: min(300px, 78vw); border-radius: 18px; margin-bottom: 26px;
+          box-shadow: 0 0 44px rgba(147, 51, 234, .35); }
+  h1 { font-size: 21px; font-weight: 700; margin-bottom: 8px; }
+  p { color: #9aa2aa; font-size: 15px; line-height: 1.5; max-width: 330px; margin-bottom: 26px; }
+  .btn { display: inline-block; background: #16e0c2; color: #04110e; font-weight: 800;
+         font-size: 17px; padding: 16px 38px; border-radius: 16px; text-decoration: none;
+         box-shadow: 0 0 24px rgba(22, 224, 194, .35); }
+  .sub { color: #5a6066; font-size: 12px; margin-top: 16px; }
+</style>
+</head>
+<body>
+  <div class="wordmark">ΛTHENΛ</div>
+  <div class="tagline">Outwork yesterday</div>
+  <img class="shot" src="avatar.png" alt="ATHENA avatar with muscles lit up and a violet aura">
+  <h1>Your muscles light up when you train them.</h1>
+  <p>Log your lifts and watch your avatar ignite, muscle by muscle. Build the streak, earn the aura.</p>
+  <a class="btn" id="store" href="https://apps.apple.com/app/id6780311753">Download on the App&nbsp;Store</a>
+  <div class="sub">Free · iPhone</div>
+  <script>
+    // Send tappers straight through after a beat — the button stays for everyone else.
+    setTimeout(function () { window.location.href = document.getElementById('store').href; }, 1400);
+  </script>
+</body>
+</html>

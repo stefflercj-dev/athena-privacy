@@ -32,6 +32,12 @@
   <p>Log your lifts and watch your avatar ignite, muscle by muscle. Build the streak, earn the aura.</p>
   <a class="btn" id="store" href="https://apps.apple.com/app/id6780311753">Download on the App&nbsp;Store</a>
   <div class="sub">Free · iPhone</div>
+  <div id="inapp-hint" style="display:none; margin-top:22px; padding:14px 18px; max-width:330px;
+       border:1px solid rgba(22,224,194,.35); border-radius:14px; color:#9aa2aa;
+       font-size:13.5px; line-height:1.5;">
+    Button not opening? Instagram blocks App Store links.<br>
+    Tap <b style="color:#eef2f6;">•••</b> at the top → <b style="color:#eef2f6;">Open in browser</b>
+  </div>
   <script>
     (function () {
       var ua = navigator.userAgent || '';
@@ -44,6 +50,7 @@
       var deep = 'itms-apps://apps.apple.com/app/id6780311753';
 
       if (isIOS) { btn.href = deep; }
+      if (inApp) { document.getElementById('inapp-hint').style.display = 'block'; }
 
       btn.addEventListener('click', function (e) {
         if (!isIOS) return;

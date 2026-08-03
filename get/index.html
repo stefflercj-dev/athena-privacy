@@ -33,8 +33,13 @@
   <a class="btn" id="store" href="https://apps.apple.com/app/id6780311753">Download on the App&nbsp;Store</a>
   <div class="sub">Free · iPhone</div>
   <script>
-    // Send tappers straight through after a beat — the button stays for everyone else.
-    setTimeout(function () { window.location.href = document.getElementById('store').href; }, 1400);
+    // Instagram/Facebook/TikTok in-app browsers hang on App Store redirects — there we
+    // show the page and let the button do the work. Everywhere else, auto-forward.
+    var ua = navigator.userAgent || '';
+    var inApp = /Instagram|FBAN|FBAV|FB_IAB|TikTok|Snapchat|Twitter|Line\//i.test(ua);
+    if (!inApp) {
+      setTimeout(function () { window.location.href = document.getElementById('store').href; }, 1400);
+    }
   </script>
 </body>
 </html>

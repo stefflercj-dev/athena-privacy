@@ -54,9 +54,16 @@
       btn.addEventListener('click', function (e) {
         if (!isIOS) return;
         e.preventDefault();
-        window.location.href = deep;
-        // If the App Store didn't take over, fall back to the web page.
-        setTimeout(function () { window.location.href = web; }, 700);
+        if (inApp) {
+          // x-safari-https:// forces iOS to hand the URL to Safari, escaping the
+          // in-app browser that swallows App Store links.
+          window.location.href = 'x-safari-https://apps.apple.com/app/id6780311753';
+          setTimeout(function () { window.location.href = deep; }, 500);
+          setTimeout(function () { window.location.href = web; }, 1200);
+        } else {
+          window.location.href = deep;
+          setTimeout(function () { window.location.href = web; }, 700);
+        }
       });
 
       // Outside in-app browsers, send people through automatically.

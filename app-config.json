@@ -11,6 +11,18 @@
       "body": "Tap any workout in the Friends feed and the whole thing opens — every exercise, every set, every weight, supersets included. One button turns it into your own routine.\n\nIt copies in your units, so their kg lands as your lb.\n\nAnd if you'd rather your numbers stayed yours: Settings → Share workout details turns the detail off. Friends still see that you trained, just not what you lifted."
     },
     {
+      "id": "2026-08-tell-me",
+      "kind": "ask",
+      "title": "Tell me what to build",
+      "body": "I read every email that comes through Send Feedback. Not a support team — me, usually at night.\n\nA good amount of what's already in ATHENA is here because somebody asked for it. So if something's missing, or something annoys you every single time you open the app, that's genuinely the most useful thing you can send me. Small stuff counts — a button in the wrong place is a real problem.\n\nWe're small enough right now that one person's idea can actually change the app. That stops being true at some point. Use it while it's true.\n\nDispatch is one-way on purpose, so it lands in my inbox instead. Tell me what you'd build and I'll tell you straight whether I can.",
+      "actions": [
+        {
+          "label": "Send an idea",
+          "kind": "idea"
+        }
+      ]
+    },
+    {
       "id": "2026-08-hundred",
       "kind": "ask",
       "title": "100 of you",

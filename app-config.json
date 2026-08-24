@@ -2,5 +2,35 @@
   "minBuild": 8,
   "latestBuild": 11,
   "updateURL": "https://apps.apple.com/app/id6780311753",
-  "message": "Update to the latest ATHENA — Hevy/Strong import fixed, smoother Friends feed, and a cleaner streak. OUTWORK YESTERDAY."
+  "message": "Update to the latest ATHENA — Hevy/Strong import fixed, smoother Friends feed, and a cleaner streak. OUTWORK YESTERDAY.",
+  "dispatch": [
+    {
+      "id": "2026-08-1.2-steal",
+      "kind": "update",
+      "title": "Steal your friend's workout",
+      "body": "Tap any workout in the Friends feed and the whole thing opens — every exercise, every set, every weight, supersets included. One button turns it into your own routine.\n\nIt copies in your units, so their kg lands as your lb.\n\nAnd if you'd rather your numbers stayed yours: Settings → Share workout details turns the detail off. Friends still see that you trained, just not what you lifted."
+    },
+    {
+      "id": "2026-08-hundred",
+      "kind": "ask",
+      "title": "100 of you",
+      "body": "ATHENA just passed 100 people. By App Store standards that's nothing. To me it's absurd — I build this alone, in the evenings, and a few weeks ago it was me and a handful of friends.\n\nThere's no marketing engine behind this. I tried paid ads and turned them off; they weren't working. Everyone here found it because somebody posted about it, or told someone at the gym.\n\nSo if ATHENA's earned it, send it to one person who lifts. One. That's the whole ask, and it genuinely is how this grows.",
+      "actions": [
+        {
+          "label": "Share ATHENA",
+          "kind": "share"
+        },
+        {
+          "label": "Send an idea",
+          "kind": "idea"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-next",
+      "kind": "next",
+      "title": "What I'm building next",
+      "body": "More avatars — different bodies to grow into, not just different colours. Refer a friend: give a month, get a month. And a rebuilt first run, so new people reach the part that actually hooks faster.\n\nNo dates on any of it. I'd rather ship one thing properly than promise five."
+    }
+  ]
 }

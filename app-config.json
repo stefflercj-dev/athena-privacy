@@ -1,8 +1,8 @@
 {
   "minBuild": 8,
-  "latestBuild": 11,
+  "latestBuild": 12,
   "updateURL": "https://apps.apple.com/app/id6780311753",
-  "message": "Update to the latest ATHENA — Hevy/Strong import fixed, smoother Friends feed, and a cleaner streak. OUTWORK YESTERDAY.",
+  "message": "ATHENA 1.2 is here — tap any workout in your Friends feed to see the whole thing and save it as your own routine. Plus two new themes. OUTWORK YESTERDAY.",
   "dispatch": [
     {
       "id": "2026-08-1.2-steal",

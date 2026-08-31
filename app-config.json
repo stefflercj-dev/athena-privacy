@@ -1,15 +1,19 @@
 {
   "minBuild": 8,
-  "latestBuild": 13,
+  "latestBuild": 15,
   "updateURL": "https://apps.apple.com/app/id6780311753",
-  "message": "ATHENA 1.2.1 is out — fix any workout's time with a dial, on the finish screen or on any past workout. Plus the custom-exercise equipment list scrolls again on iOS 26, and a rebuilt weight tracker. OUTWORK YESTERDAY.",
+  "message": "ATHENA 1.2.2 is out — the avatar has been completely redrawn. Every muscle is its own panel now, and you can finally fix a mistyped weigh-in: Profile → Weigh-in history, tap to edit, swipe to delete. OUTWORK YESTERDAY.",
   "dispatch": [
     {
-      "id": "2026-08-avatars-v2",
-      "kind": "next",
-      "title": "New bodies are coming",
-      "body": "The avatar's been redrawn from scratch — both the men's and the women's figures, front and back. Every muscle is its own panel now, the seams stay sharp when it lights up, and a few muscles that were never separate before finally are: side delts, adductors, abductors, tibialis.\n\nIt's on my phone tonight. It'll be in the next update, and it's the whole update — nothing else in it, so it can go out fast.\n\nAfter that, different bodies to grow into. Same muscles, new skins.",
+      "id": "2026-08-1.2.2-avatars",
+      "kind": "update",
+      "title": "The new bodies are here",
+      "body": "Update to 1.2.2 and look at your avatar. Both figures — men's and women's, front and back — have been redrawn from scratch. Every muscle is its own panel, the lines stay sharp when they light up, and side delts, adductors, abductors and tibialis are finally their own muscles.\n\nAlso in this one: weigh-in history. Typo'd your weight? Profile → Weigh-in history — tap to fix it, swipe to delete it. A mistyped weigh-in used to live on your chart forever; that's over.\n\nIf the new look does anything for you, a rating genuinely helps more than you'd think.",
       "actions": [
+        {
+          "label": "Rate ATHENA",
+          "kind": "review"
+        },
         {
           "label": "Send an idea",
           "kind": "idea"

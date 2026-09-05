@@ -1,9 +1,25 @@
 {
   "minBuild": 8,
-  "latestBuild": 15,
+  "latestBuild": 17,
   "updateURL": "https://apps.apple.com/app/id6780311753",
-  "message": "ATHENA 1.2.2 is out — the avatar has been completely redrawn. Every muscle is its own panel now, and you can finally fix a mistyped weigh-in: Profile → Weigh-in history, tap to edit, swipe to delete. OUTWORK YESTERDAY.",
+  "message": "ATHENA 1.3 is out — CARDIO. Treadmill, stair climber, bike, rower and elliptical, each with its own console, live PRs, and distance charts. Add a machine from the Cardio chip. OUTWORK YESTERDAY.",
   "dispatch": [
+    {
+      "id": "2026-09-1.3-cardio",
+      "kind": "update",
+      "title": "Cardio is here",
+      "body": "Update to 1.3 and open Add Exercise: there's a Cardio chip now. Treadmill, stair climber, stationary bike, rowing machine, elliptical — each gets its own console (time, speed, incline, level, distance, floors). Run the stopwatch while you go, or type the time after. Every machine has its own page with distance, time and speed over time, and your circle ranked by distance.\n\nA PR pops the moment you finish an interval, and cardio lands in Apple Health as the right workout type.\n\nIf you've been waiting for this one, a rating genuinely helps more than you'd think.",
+      "actions": [
+        {
+          "label": "Rate ATHENA",
+          "kind": "review"
+        },
+        {
+          "label": "Send an idea",
+          "kind": "idea"
+        }
+      ]
+    },
     {
       "id": "2026-08-1.2.2-avatars",
       "kind": "update",

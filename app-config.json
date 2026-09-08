@@ -1,9 +1,25 @@
 {
   "minBuild": 8,
-  "latestBuild": 17,
+  "latestBuild": 18,
   "updateURL": "https://apps.apple.com/app/id6780311753",
-  "message": "ATHENA 1.3 is out — CARDIO. Treadmill, stair climber, bike, rower and elliptical, each with its own console, live PRs, and distance charts. Add a machine from the Cardio chip. OUTWORK YESTERDAY.",
+  "message": "ATHENA 1.4 is out — THE RPG UPDATE. Every set you log levels you up. Earn titles, unlock banners, build your player card and let your crew see it. OUTWORK YESTERDAY.",
   "dispatch": [
+    {
+      "id": "2026-09-1.4-rpg",
+      "kind": "update",
+      "title": "The RPG update is here",
+      "body": "Update to 1.4 and open Profile. Every pound you've ever lifted already counts — your level is waiting at the top of Home.\n\n18 titles to earn (some are secrets, some are riddles), 7 banners to unlock, a real profile photo, a bio, and a player card your friends can open from their Friends tab. Nothing's paywalled: every title and banner is free to earn and wear.\n\nIf leveling up does anything for you, a rating genuinely helps more than you'd think.",
+      "actions": [
+        {
+          "label": "Rate ATHENA",
+          "kind": "review"
+        },
+        {
+          "label": "Send an idea",
+          "kind": "idea"
+        }
+      ]
+    },
     {
       "id": "2026-09-1.3-cardio",
       "kind": "update",

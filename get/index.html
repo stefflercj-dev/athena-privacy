@@ -30,7 +30,7 @@
   <img class="shot" src="avatar.png" alt="ATHENA avatar with muscles lit up and a violet aura">
   <h1>Your muscles light up when you train them.</h1>
   <p>Log your lifts and watch your avatar ignite, muscle by muscle. Build the streak, earn the aura.</p>
-  <a class="btn" id="store" href="https://apps.apple.com/app/id6780311753">Download on the App&nbsp;Store</a>
+  <a class="btn" id="store" href="https://apps.apple.com/us/app/athena-gym-tracker-log/id6780311753">Download on the App&nbsp;Store</a>
   <div class="sub">Free · iPhone</div>
   <div id="inapp-hint" style="display:none; margin-top:20px; color:#5a6066; font-size:12.5px;
        letter-spacing:.2px;">
@@ -39,37 +39,18 @@
   </div>
   <script>
     (function () {
+      // iOS treats an https App Store URL as a UNIVERSAL LINK and hands it to the App Store
+      // app itself. The old itms-apps:// and x-safari-https:// schemes are legacy and are no
+      // longer honoured reliably (2026-09-09) — a plain https link is the most reliable path
+      // everywhere, including the TikTok / Instagram in-app browsers.
       var ua = navigator.userAgent || '';
-      var isIOS = /iPhone|iPad|iPod/i.test(ua);
       var inApp = /Instagram|FBAN|FBAV|FB_IAB|TikTok|Snapchat|Twitter|Line\//i.test(ua);
-      var btn = document.getElementById('store');
-      var web = 'https://apps.apple.com/app/id6780311753';
-      // itms-apps:// hands straight to the native App Store app — the https URL is what
-      // in-app browsers (Instagram/Facebook/TikTok) silently swallow.
-      var deep = 'itms-apps://apps.apple.com/app/id6780311753';
-
-      if (isIOS) { btn.href = deep; }
+      var web = 'https://apps.apple.com/us/app/athena-gym-tracker-log/id6780311753';
+      document.getElementById('store').href = web;
+      // In an in-app browser, show the escape hatch in case its webview still swallows the link.
       if (inApp) { document.getElementById('inapp-hint').style.display = 'block'; }
-
-      btn.addEventListener('click', function (e) {
-        if (!isIOS) return;
-        e.preventDefault();
-        if (inApp) {
-          // x-safari-https:// forces iOS to hand the URL to Safari, escaping the
-          // in-app browser that swallows App Store links.
-          window.location.href = 'x-safari-https://apps.apple.com/app/id6780311753';
-          setTimeout(function () { window.location.href = deep; }, 500);
-          setTimeout(function () { window.location.href = web; }, 1200);
-        } else {
-          window.location.href = deep;
-          setTimeout(function () { window.location.href = web; }, 700);
-        }
-      });
-
-      // Outside in-app browsers, send people through automatically.
-      if (!inApp) {
-        setTimeout(function () { window.location.href = isIOS ? deep : web; }, 1400);
-      }
+      // Outside an in-app browser, send people through on their own after a beat.
+      else { setTimeout(function () { window.location.href = web; }, 1600); }
     })();
   </script>
 </body>

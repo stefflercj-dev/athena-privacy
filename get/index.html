@@ -560,16 +560,15 @@ footer.site a{text-decoration:none}
   var inApp = /Instagram|FBAN|FBAV|FB_IAB|TikTok|BytedanceWebview|musical_ly|Snapchat|Twitter|Line\//i.test(ua);
   var iOS  = /iPhone|iPad|iPod/i.test(ua);
 
-  // Inside an in-app browser it is Apple's https → itms-apps redirect that dies:
-  // the WebView refuses to hand the custom scheme to the OS and the tap does
-  // nothing. Pointing the anchor straight at the scheme skips that hop, and it
-  // is still a real anchor and a real user tap, which is what iOS requires.
-  if (inApp && iOS){
-    var deep = 'itms-apps://apps.apple.com/app/id6780311753';
-    var links = document.querySelectorAll('.cta');
-    for (var i = 0; i < links.length; i++) links[i].href = deep;
-    document.body.className += ' inapp';
-  }
+  // ⚠️ DO NOT swap these anchors to itms-apps:// (tried 2026-09-09, broke the
+  // button). The two failure modes are not symmetrical: if a WebView won't hand
+  // the custom scheme to the OS, the tap does absolutely NOTHING and the page
+  // looks broken. A plain https App Store URL is a universal link — iOS
+  // intercepts it on a real tap, and in the worst case the WebView just loads
+  // the App Store page, which still has a Get button. Degraded beats dead.
+  // The anchors stay exactly as they are in the HTML; we only surface the
+  // escape hatch for the browsers where the handoff can fail.
+  if (inApp && iOS) document.body.className += ' inapp';
 
   // Reveal the thumb-reach button only once the hero one is gone, so the page
   // never shows two competing copies of the same ask.

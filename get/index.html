@@ -113,13 +113,28 @@ p{margin:0}
 .cta svg{width:17px;height:17px;flex:none}
 .cta-note{margin-top:13px;font-size:13.5px;color:var(--muted)}
 .cta-row{margin-top:30px}
-/* the escape hatch, shown only where the handoff can actually break */
+/* ⚠️ TikTok's in-app browser will NOT hand an App Store link to the phone
+   (confirmed on device 2026-09-09: dead inside TikTok, works via ••• → Open in
+   browser). Nearly all of this page's traffic arrives from exactly there, so
+   the way out is not a footnote — it is the instruction, and it outranks the
+   button it sits under. */
 .hatch{
-  display:none;margin-top:16px;font-size:13px;color:var(--muted);line-height:1.45;
-  border-left:2px solid var(--teal-soft);padding-left:12px;max-width:34ch;
+  display:none;margin-top:14px;padding:15px 16px;border-radius:14px;
+  background:rgba(25,227,196,.07);border:1px solid rgba(25,227,196,.32);
+  font-size:14.5px;line-height:1.45;color:var(--ink);max-width:34ch;
 }
-.hatch b{color:var(--ink);font-weight:600}
+.hatch b{color:var(--teal);font-weight:700}
+.hatch .dots{
+  display:inline-block;font-family:var(--display);font-weight:800;
+  background:var(--teal);color:#042420;border-radius:6px;
+  padding:0 7px;line-height:1.5;letter-spacing:.06em;
+}
+.hatch small{display:block;margin-top:7px;font-size:12.5px;color:var(--muted)}
 body.inapp .hatch{display:block}
+/* the button can't work here, so it stops pretending to be the main action */
+body.inapp .cta{background:transparent;color:var(--teal);
+  box-shadow:inset 0 0 0 1px rgba(25,227,196,.45)}
+body.inapp .dock{display:none}
 
 /* thumb-reach CTA: the highest-leverage element on a page read
    one-handed inside a social app's browser */
@@ -323,8 +338,9 @@ footer.site a{text-decoration:none}
         Get ATHENA
       </a>
       <p class="cta-note">Free on the App&nbsp;Store · iPhone · no account needed</p>
-      <p class="hatch">Nothing happened? Tap <b>•••</b> at the top of this browser →
-        <b>Open in browser</b>, then tap again.</p>
+      <p class="hatch">TikTok's browser can't open the App&nbsp;Store.
+        Tap <span class="dots">•••</span> at the top right, then <b>Open in browser</b>.
+        <small>Takes two seconds. The button works everywhere else.</small></p>
     </div>
 
     <div class="proof">
@@ -529,8 +545,9 @@ footer.site a{text-decoration:none}
         Get ATHENA
       </a>
       <p class="cta-note">Free · iPhone · no account needed</p>
-      <p class="hatch">Nothing happened? Tap <b>•••</b> at the top of this browser →
-        <b>Open in browser</b>, then tap again.</p>
+      <p class="hatch">TikTok's browser can't open the App&nbsp;Store.
+        Tap <span class="dots">•••</span> at the top right, then <b>Open in browser</b>.
+        <small>Takes two seconds. The button works everywhere else.</small></p>
     </div>
     <p class="made">Built by one person in Virginia.<br>
       Updated most weeks, usually because somebody asked.</p>

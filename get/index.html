@@ -318,6 +318,30 @@ footer.site a{text-decoration:none}
   }
 }
 </style>
+
+<!-- Landing-page analytics (added 2026-09-13 after a TikTok Promote sent 770 "clicks" and the page could not
+     say how many arrived). Same PostHog project as the app; every event from here carries $lib='web', which
+     briefing.py / full_report.py EXCLUDE so app metrics stay clean. No cookies-banner-grade data: page view,
+     page leave (= time on page), and taps on the App Store buttons. -->
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onSessionId getSurveys getActiveMatchingSurveys captureException".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_p2HBCijfHHt7nB4FSbj4b3Mgm5FMsDZxMNkgoc6GPc5r', {
+  api_host: 'https://us.i.posthog.com',
+  person_profiles: 'identified_only',
+  autocapture: false,
+  capture_pageview: true,
+  capture_pageleave: true,
+  disable_session_recording: true
+});
+posthog.register({ site: 'landing', page: 'get' });
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function (a, i) {
+    a.addEventListener('click', function () {
+      posthog.capture('landing_store_tap', { position: i + 1, href: a.href, ref: document.referrer || '' });
+    });
+  });
+});
+</script>
 </head>
 <body>
 

@@ -5,6 +5,22 @@
   "message": "ATHENA 1.4 is out — THE RPG UPDATE. Every set you log levels you up. Earn titles, unlock banners, build your player card and let your crew see it. OUTWORK YESTERDAY.",
   "dispatch": [
     {
+      "id": "2026-10-thank-you",
+      "kind": "ask",
+      "title": "Thank you — now tell me what's next",
+      "body": "ATHENA is about 250 people now. I build this alone, in the evenings, and every one of you found it because somebody shared it or went looking for it — there's no company behind this. So first: thank you for training with it.\n\nTwo asks. Tell me what to build — what's missing, what annoys you every single time you open the app, what you wish it did. Send an idea lands straight in my inbox and I read every one, usually the same night. A good chunk of what's in ATHENA already is here because somebody asked.\n\nAnd if ATHENA has earned it, a rating matters more than you'd think at this size. It's what puts the app in front of the next lifter.",
+      "actions": [
+        {
+          "label": "Send an idea",
+          "kind": "idea"
+        },
+        {
+          "label": "Rate ATHENA",
+          "kind": "review"
+        }
+      ]
+    },
+    {
       "id": "2026-09-1.4-rpg",
       "kind": "update",
       "title": "The RPG update is here",
